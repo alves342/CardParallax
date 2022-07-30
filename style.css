@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&family=Rubik:ital@0;1&display=swap');
+body{
+    background-color: #7f5a83;
+    background-image: linear-gradient(120deg, #2c004a 0%, #e26d00 74%);
+    font-family: Lato-bold, sans-serif;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.top{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.perspective{
+    width: 100%;
+    perspective: 1000px;
+}
+
+.card{
+    width: 270px;
+    height: 413px;
+    margin: auto;
+    transform-style: preserve-3d;
+    transition: transform 0.05 linear;
+}
+
+.card .thumb{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.thumb img{
+    box-shadow: 0 70px 63px -60px #191919;
+    border-radius: 15px;
+    width: 200px;
+    height: 293px;
+}
+
+.card .thumb:after{
+    background: inherit;
+    content: '';
+    display: block;
+    position: absolute;
+    left: -60px;
+    top: 40px;
+    width: 100%;
+    height: 108%;
+    z-index: -1;
+    filter: blur(55px);
+}
+
+.card h2{
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    font-size: 40px;
+    font-weight: 100;
+    transform: translateZ(80px);
+}
+
+.card span{
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 100px;
+    right: -100px;
+    font-size: 37px;
+    font-weight: 400;
+    transform: translateZ(35px);
+}
+
+img{
+    margin: auto;
+    display: block;
+}
